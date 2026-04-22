@@ -4,7 +4,10 @@ services:
   app:
     image: growilabs/growi:7
     ports:
-      - 3000:3000
+      - 127.0.0.1:3000:3000    # localhost only by default
+    links:
+      - mongo:mongo
+      - elasticsearch:elasticsearch
     depends_on:
         mongo:
           condition: service_healthy
