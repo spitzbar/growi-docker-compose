@@ -32,11 +32,11 @@ services:
     volumes:
       - growi_data:/data
       - page_bulk_export_tmp:/tmp/page-bulk-export
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:3000"] # healtcheck path: http://localhost:3000/_api/v3/healthcheck
-      interval: 10s
-      timeout: 5s
-      retries: 6
+    #healthcheck:
+      #test: ["CMD", "curl", "-f", "http://localhost:3000"] # healtcheck path: http://localhost:3000/_api/v3/healthcheck
+      #interval: 10s
+      #timeout: 5s
+      #retries: 6
 
   mongo:
     image: mongo:8.0
