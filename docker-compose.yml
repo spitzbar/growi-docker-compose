@@ -34,7 +34,7 @@ services:
       - page_bulk_export_tmp:/tmp/page-bulk-export
 
   mongo:
-    image: mongo:8.0
+    image: mongo:8.2
     # For MongoDB 6.x
     # image: mongo:6.0
     restart: unless-stopped
