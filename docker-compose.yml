@@ -48,9 +48,9 @@ services:
       retries: 6
 
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:9.0.3
+    image: docker.elastic.co/elasticsearch/elasticsearch:9.3.3
     # For Elasticsearch 8.x
-    # image: docker.elastic.co/elasticsearch/elasticsearch:8.18.2
+    # image: docker.elastic.co/elasticsearch/elasticsearch:8.19.14
     environment:
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms256m -Xmx256m"  # increase amount if you have enough memory
