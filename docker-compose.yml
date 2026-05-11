@@ -25,9 +25,6 @@ services:
       # - FORCE_WIKI_MODE='public'    # activate this line to force wiki public mode
       # - FORCE_WIKI_MODE='private'   # activate this line to force wiki private mode
 
-    entrypoint: "/docker-entrypoint.sh"
-    command: ["npm run migrate && node -r dotenv-flow/config --expose_gc dist/server/app.js"]
-
     restart: unless-stopped
     volumes:
       - growi_data:/data
